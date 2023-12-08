@@ -1,0 +1,50 @@
+<ion-header>
+</ion-header  >
+
+<ion-content>
+      <div class="app-splash-screen" [ngStyle]="{left: windowWidth}">
+            <div class="app-splash-screen-inner"  class="host">
+        
+              <div class="app-splash-screen-inner">
+                <div class="espacio">
+               <img src="assets/rabbeatdiscord.png">
+             </div>
+             <center><div class="app-loader"></div></center> 
+            </div>
+          </div></div>
+    <ion-list>
+      <ion-item>
+      
+        
+          <ion-label position="floating"><ion-icon name="people-circle-outline"></ion-icon>Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user" ></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+            <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon>Email</ion-label>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+            <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon>Contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+
+      </ion-item>
+<br>
+      <ion-item>
+
+            <ion-button size="300" round (click)="logear()" (ionChange)="logear()"  ><ion-icon name="enter-outline"></ion-icon></ion-button>
+      
+      </ion-item>
+    </ion-list>
+    <br>
+    <a [routerLink]="['/registro']">
+    <ion-label>No tienes una cuenta? Registrate aquí!</ion-label>
+  </a>
+    
+
+</ion-content>

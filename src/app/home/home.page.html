@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar> 
+    <ion-buttons slot="start">
+      <ion-menu-button id="id"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Home page</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <ion-item>
+      
+    <ion-slides [options]="option">
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+        <ion-card>
+          <img src="assets/Fotos/Ambrosia.jpg" [routerLink]="['/ambrosia']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+        
+        <ion-card>
+          <img src="assets/Fotos/Daltonico.jpg" [routerLink]="['/daltonico']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+       
+        <ion-card>
+          <img src="assets/Fotos/grow.jpg"  [routerLink]="['/grow']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+        
+        <ion-card>
+          <img src="assets/Fotos/dos.jpg"  [routerLink]="['/dos']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+        
+        <ion-card>
+          <img src="assets/Fotos/madrileno.jpg"  [routerLink]="['/madrileno']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+        
+        <ion-card>
+          <img src="assets/Fotos/puberty2.jpg"  [routerLink]="['/puberty2']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+    
+        <ion-card>
+          <img src="assets/Fotos/queen.jpg"  [routerLink]="['/queen']">
+        </ion-card>
+      </ion-slide>
+  
+      <ion-slide color="succes">
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+    <div class="swiper-button-next" (click)="slideNext()"></div>
+        
+        <ion-card>
+          <img src="assets/Fotos/dolls.jpg"  [routerLink]="['/virginia']">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-item>
+  <ion-item>¿Te gustó la app?</ion-item>
+  <ion-item>si <ion-checkbox></ion-checkbox></ion-item>
+  
+  <ion-item> no <ion-checkbox></ion-checkbox></ion-item>
+
+  <ion-radio-group><ion-item>¿Del 1 al 5 cuanto le pones?</ion-item>
+    <ion-item>
+      <ion-label>1</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3</ion-label>
+      <ion-radio value="3"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4</ion-label>
+      <ion-radio value="4"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>5</ion-label>
+      <ion-radio value="5"></ion-radio>
+    </ion-item>
+    
+  </ion-radio-group>
+  <center><ion-item><h2>Rabbeat</h2></ion-item></center>
+  <h3>Rabbeat es un reproductor de música; también se pueden registrar usuarios, añadir artistas, modificar artistas y eliminar artistas</h3>
+</ion-content>

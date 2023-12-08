@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button id="id" ></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/imagenes/rabbeat.png" height="50" width="60" align="right">
+    <ion-icon name="home-outline" [routerLink]="['/home']">
+  </ion-icon>
+  <center>
+    <ion-title>Añadir artista</ion-title>
+  </center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  Escribe la informacion del artista a insertar
+    <ion-item>
+     <ion-label><ion-icon name="person-outline"></ion-icon>Nombre del artista:</ion-label>
+      <ion-input [(ngModel)]="nom_art" name="nom_art"></ion-input>
+    </ion-item>
+  <br>
+    <ion-item>
+      <ion-label><ion-icon name="logo-instagram"></ion-icon>Instagram:</ion-label>
+      <ion-input [(ngModel)]="ig" name="instagram"></ion-input>
+    </ion-item>
+  <br>
+    <ion-item>
+      <ion-label><ion-icon name="musical-notes-outline"></ion-icon>Spotify:</ion-label>
+      <ion-input [(ngModel)]="spotify" name="spotify"></ion-input>
+    </ion-item> 
+  <br>
+    <ion-item>
+      <ion-label><ion-icon name="list-outline"></ion-icon>Descripcion:</ion-label>
+      <ion-input [(ngModel)]="descripcion" name="descripcion"></ion-input>
+   </ion-item>
+   <ion-button color="secondary"  (click)="anadir()">Insertar</ion-button>
+</ion-content>

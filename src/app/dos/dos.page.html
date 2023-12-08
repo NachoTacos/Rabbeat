@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button id="id" ></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/imagenes/rabbeat.png" height="50" width="60" align="right">
+    <ion-icon (click)="togglePlayer(true)" name="home-outline" [routerLink]="['/home']">
+  </ion-icon>
+    <ion-title>II</ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button *ngFor="let track of playlist" (click)="start(track)">
+        <ion-label [color]="track == activeTrack ? 'success' : 'success'">
+          <ion-thumbnail slot="start" width="100" height="100">
+          <img src="assets/Fotos/dos.jpg">
+        </ion-thumbnail>
+          <ion-label> {{track.name}} <p>{{track.duracion}}</p>
+             </ion-label>
+            
+      
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
+  <ion-footer *ngIf="activeTrack">
+    <ion-toolbar color="light">
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <center>
+          
+            <img src="assets/Fotos/dos.jpg" width="200" height="200">
+          
+        </center>
+        <br>
+
+           {{activeTrack.name}}
+          
+
+        </ion-col>
+        <ion-col size="12">
+        <ion-range #range [(ngModel)]="progress" max="100" color="success" (touchend)="seek()" (mouseup)="seek()">
+  
+        </ion-range>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+  
+          <ion-button fill="clear" (click)="prev()" color="success">
+            <ion-icon slot="icon-only" name="play-back-outline"></ion-icon>
+          </ion-button>
+  
+  
+          <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="success">
+            <ion-icon slot="icon-only" name="play"></ion-icon>
+          </ion-button>
+  
+  
+          <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" color="success">
+            <ion-icon slot="icon-only" name="pause"></ion-icon>
+          </ion-button>
+  
+  
+          <ion-button fill="clear" (click)="next()" color="success">
+            <ion-icon slot="icon-only" name="play-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>

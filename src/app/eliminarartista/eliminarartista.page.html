@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button id="id" ></ion-menu-button>
+      </ion-buttons>
+      <img src="assets/imagenes/rabbeat.png" height="50" width="60" align="right"> 
+      <ion-icon name="home-outline" [routerLink]="['/home']"></ion-icon>
+      <center> <ion-title>Eliminar artista</ion-title></center>
+        </ion-toolbar>
+    </ion-header> 
+  <ion-content>
+    <ion-item>  
+   <h1> Escribe la informacion del artista a eliminar</h1>
+  </ion-item>
+  <br>
+      <ion-item>
+       <ion-label><ion-icon name="pencil-outline"></ion-icon>Nombre del artista:</ion-label>
+        <ion-input [(ngModel)]="nom_art" name="nom_art"></ion-input>
+      </ion-item>
+      <br>
+      <br>
+      <ion-button (click)="eliminar()" size="400" color="secondary"><ion-icon name="trash-outline"></ion-icon>Eliminar</ion-button>
+  </ion-content>>

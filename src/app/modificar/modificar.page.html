@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Usuario a buscar: </ion-label>
+      <ion-input type="text" [(ngModel)]="id_artista"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button round (click)="buscar()">Buscar</ion-button>
+    </ion-item>
+  </ion-list>
+  <table>
+    <tr wrap *ngFor="let item of listado; let index=index">
+      <b><ion-label>Nombre: </ion-label></b><ion-input type="text" [(ngModel)]="d.nom_art">{{item.nom_art}}</ion-input>
+    </tr>
+    <tr wrap *ngFor="let item of listado; let index=index">
+      <b><ion-label>Ig(link): </ion-label></b><ion-input type="text" [(ngModel)]="d.ig">{{item.ig}}</ion-input>
+    </tr>
+    <tr wrap *ngFor="let item of listado; let index=index">
+      <b><ion-label>Spotify(link): </ion-label></b><ion-input type="text" [(ngModel)]="d.spotify">{{item.spotify}}</ion-input>
+    </tr>
+    <tr wrap *ngFor="let item of listado; let index=index">
+      <b><ion-label>descripcion: </ion-label></b>{{item.descripcion}}<ion-input type="text" [(ngModel)]="d.descripcion">{{item.descripcion}}</ion-input>
+    </tr>
+  </table>
+<ion-button round (click)="actualizar()">Actualizar</ion-button>
+
+</ion-content>

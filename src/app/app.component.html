@@ -1,0 +1,38 @@
+<ion-app>
+  <ion-split-pane contentId="id">
+    <ion-menu side="start" type="overlay"contentId="id" menuId="primero">
+       <ion-header>
+         <ion-toolbar>
+            <ion-title>Rabbeat</ion-title>
+         </ion-toolbar>
+       </ion-header>
+       <ion-content>
+        
+         <ion-list>
+          <ion-item >
+            <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label (click)="cerrar()" [routerLink]="['/artistas']"><h2>Artistas</h2></ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-icon name="person-add-outline"></ion-icon>
+          <ion-label (click)="cerrar()" [routerLink]="['/eliminarartista']"><h2>Eliminar artista</h2></ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-icon name="person-add-outline"></ion-icon>
+          <ion-label (click)="cerrar()" [routerLink]="['/anadirartista']"><h2>Añadir artista</h2></ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-icon name="exit-outline"></ion-icon>
+          <ion-label (click)="cerrar()" [routerLink]="['/login']"><h2>Cerrar sesión</h2></ion-label>
+        </ion-item>
+
+         </ion-list>
+
+       </ion-content>
+    </ion-menu>
+    <ion-content>
+      
+    </ion-content>
+    <ion-router-outlet id="id"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

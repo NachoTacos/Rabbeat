@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "rabbeat",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

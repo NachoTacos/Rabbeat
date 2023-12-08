@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar> 
+    <ion-buttons slot="start">
+      <ion-menu-button id="id"></ion-menu-button>
+      </ion-buttons>
+      <img src="assets/imagenes/rabbeat.png" height="50" width="60" align="right">
+      <ion-icon name="home-outline" [routerLink]="['/home']">
+    </ion-icon>
+    <center>
+    <ion-title>Artistas</ion-title>
+  </center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-avatar>
+    </ion-avatar>
+    <div wrap *ngFor="let item of listado; let index=index">
+      <h1><ion-icon name="person-circle-outline"></ion-icon>{{item.nom_art}}</h1>
+      <h1><a href="{{item.ig}}">Instagram</a></h1>
+      <h1><a href="{{item.spotify}}">Spotify</a></h1>
+         
+      
+          <h2><p>{{item.descripcion}} </p></h2>
+    </div>
+   
+<br>
+</ion-content>

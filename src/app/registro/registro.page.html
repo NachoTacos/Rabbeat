@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+   <center><ion-title>Registro</ion-title></center> 
+      <img src="assets/imagenes/rabbeat.png" height="50" width="60" align="right"> 
+     
+        </ion-toolbar>
+      </ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label><ion-icon name="people-circle-outline"></ion-icon>Usuario</ion-label>
+        <ion-input  type="text" [(ngModel)]="user" name="user" 
+        ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label><ion-icon name="mail-outline"></ion-icon>Email</ion-label>
+        <ion-input  type="text" [(ngModel)]="email" name="email" ></ion-input>
+      </ion-item>      
+
+      <ion-item>
+            <ion-label><ion-icon name="lock-closed-outline"></ion-icon>Contraseña</ion-label>
+            <ion-input  type="password"  [(ngModel)]="contrasena" name="contrasena" 
+               ></ion-input>
+      </ion-item>
+
+  </ion-list>
+  <br>
+  <ion-item>
+  <ion-button  size="300" round (click)="registrar()" 
+     style="color: rgb(0, 0, 0 )" ><ion-icon name="navigate-outline" ></ion-icon>sign in</ion-button>
+    </ion-item>
+        <br>
+        <a [routerLink]="['/login']">
+          <ion-label>¿Quieres volver al Login? Presiona aquí!</ion-label>
+        </a>
+</ion-content>
